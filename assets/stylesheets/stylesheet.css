@@ -12,12 +12,18 @@ body {
   color: #f7f7f7;
 }
 
+#refresh {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .content-container {
   position: absolute;
   width: 100%;
+  height: 100%;
   bottom: 0;
-  left: 0;
-  right: 0;
+/*  left: 0;
+  right: 0;*/
 }
 
 #apod {
@@ -75,12 +81,15 @@ body {
 
 #mars, #earth {
   position: absolute;
-  width: 50%;
+  width: 30%;
   bottom: 73px;
   background: rgba(0,0,0,0.8);
   border-radius: 8px 8px 0 0;
   padding: 10px 10px 0 10px;
   display: none;
+}
+#mars {
+  right: 30%;
 }
 
 
@@ -89,11 +98,11 @@ body {
 }
 
 #earth {
-  left: 50%;
+  right: 0;
 }
 
 form {
-  padding-right: 25%;
+  padding-right: 10%;
   padding-left: 10%;
 }
 

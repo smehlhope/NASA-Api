@@ -1,5 +1,20 @@
 $(function() {
 
+////////REFRESH PAGE//////////////
+$('#refresh').on("click", function(){
+  location.reload(true);
+});
+
+
+//////////////GET DATE FOR APOD IMAGERY //////
+// var today = new Date();
+// var dd = today.getDate();
+// var mm = today.getMonth()+1; //January is 0!
+// var yyyy = today.getFullYear();
+// if(dd<10) { dd = '0'+dd } 
+// if(mm<10) { mm = '0'+mm } 
+// var today = yyyy + '-' + mm + '-' + dd;
+
 ///////SLIDE-TOGGLE ELEMENTS///////////////////////
 $('#apod-slider').on('click', function() {
 	$('#copyright, #apod-title, #apod-explaination').slideToggle('slow');
@@ -30,7 +45,6 @@ function handleResult(result){
   }
   
   if(result.media_type == "video") {
-    // $("#apod-img-id").css("display", "none"); 
     $("#apod-vid-id").attr("src", result.url);
   }
   else {

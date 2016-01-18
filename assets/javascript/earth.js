@@ -39,18 +39,22 @@ $('#earth-locations').on('submit', function(event) {
 		type: 'GET',
 		url: urlEARTH,
 		success: function(result) {
-			$('#earth-img-id').attr("src", result.url);
-			$('#earth-img-id').show();
-			$('#earth-credit').text('Image courtesy of the U.S. Geological Survey.');
-			$("#reqObjectEarth").text(urlEARTH);
-			$('#scene-id').html('Landsat Scene ID: <small>' + result.id.split('/')[1] +'</small>');
-			$('#longitude').text('Longitude: '+ longitude);
-			$('#latitude').text('Latitude: ' + latitude);
-			$('#earth-locations').hide(); 
+			if (result.url) {
+				$('#earth-img-id').attr("src", result.url);
+				$('#earth-img-id').show();
+				$('#earth-credit').text('Image courtesy of the U.S. Geological Survey.');
+				$("#reqObjectEarth").text(urlEARTH);
+				$('#scene-id').html('Landsat Scene ID: <small>' + result.id.split('/')[1] +'</small>');
+				$('#longitude').text('Longitude: '+ longitude);
+				$('#latitude').text('Latitude: ' + latitude);
+				$('#earth-locations').hide();
+				$('#error-message-earth').html(''); 
+			} else {
+				$('#error-message-earth').html("<span class='glyphicon glyphicon-alert'></span> There is no imagery available for the selected location at this time. Try another location!<span class='glyphicon glyphicon-alert'></span>"); 
+			}
 		},
 		error: function(result) {
 			$('#error-message-earth').html("<span class='glyphicon glyphicon-alert'></span> There is no imagery available for the selected location at this time. Try another location!<span class='glyphicon glyphicon-alert'></span>"); 
-
 		}
 	})
 });

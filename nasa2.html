@@ -5,7 +5,7 @@
 	<title>NASA API Examples</title>
 	<meta name="description" content="">
 	
-	<script src="assets/javascript/jquery-1.12.0.js"></script>
+	<script src="assets/javascript/jquery-2.2.0.min.js"></script>
 	<script src="assets/javascript/apod.js"></script>
 	<script src="assets/javascript/mars.js"></script>
 	<script src="assets/javascript/earth.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
 <div class="content-container">
+	<button id="refresh" type="button" class="btn btn-xs btn-primary"><small>Refresh</small></button>
 	<div id="apod">
-		<!--<div id="apod-video">
-			 <pre id="reqObject"></pre>
+		<div id="apod-video">
 			<img id="apod-img-id"/>
 			<iframe id="apod-vid-id" type="text/html" frameborder="0"></iframe>
-		</div> -->
+		</div> 
 		<div id="apod-details" class="flip-apod-off">
 			<h4 id="apod-title"></h4>
 			<p id="copyright"></p>
@@ -33,15 +33,16 @@
 			<h3 id="view-planets" class="text-right">View Planets  <span class="glyphicon glyphicon-resize-full"></span></h3>
 		</div>
 		<div id="mars">
-			<!-- <pre id="reqObjectMars"></pre> -->
 			<img id="mars-img-id" class="planet-image" />
 			<div id="mars-details">
 				<h4 id="flip-mars">Mars Rover Imagery <span class="glyphicon glyphicon-resize-full"></span></h4>
-				<h4 id="mars-camera"></h4>
-				<p id="mars-sol"></p>
-				<p id="mars-earth-date"></p>
-				<p id="mars-landing-date"></p>
-				<p id="error-messsage-mars" class="text-danger"></p>
+				<div class="image-details">
+					<h5 id="mars-camera"></h5>
+					<p id="mars-sol"></p>
+					<p id="mars-earth-date"></p>
+					<p id="mars-landing-date"></p>
+				</div>	
+				<p id="error-message-mars" class="text-danger"></p>
 				<form id="mars-locations" method="post">
 					<p><small><span class='glyphicon glyphicon-alert'></span> Because the Mars rovers have many jobs to do, not all camera/rover combinations have available imagery. Try another combination if nothing shows up!</small></p>
 					<div class="form-group">
@@ -49,7 +50,6 @@
 						<select id="rover" class="form-control">
 							<option value="Curiosity">Curiosity</option>
 							<option value="Opportunity">Opportunity</option>
-							<option value="Spirit">Spirit</option>
 						</select>
 					</div>	
 					<div class="form-group">
@@ -65,17 +65,16 @@
 			</div>
 		</div>
 		<div id="earth">
-			<!-- <pre id="reqObjectEarth"></pre> -->
 			<img id="earth-img-id" class="planet-image"/>
 			<div id="earth-details">
 				<h4 id="flip-earth">Choose Where You View Earth <span class="glyphicon glyphicon-resize-full"></span></h4>
 				<h4 id="scene-id"></h4>
 				<p id="longitude"></p>
 				<p id="latitude"></p>
-				<p id="earth-credit">/p>
-				<form id="earth-locations" method="post" action="">
-					<p id="error-messsage-earth" class="text-danger"></p>
-					<p><small><span class='glyphicon glyphicon-alert'></span> Landsat 8 imagery availability highly dependent on weather and chosen location.</small></p>
+				<p id="earth-credit"></p>
+				<form id="earth-locations" method="post">
+					<p id="error-message-earth" class="text-danger"></p>
+					<p><small><span class='glyphicon glyphicon-alert'></span> Landsat 8 imagery availability is highly dependent on weather and chosen location.</small></p>
 					<div class="form-group">
 						<label for="longitude">Longitude: </label>
 						<input id="longSlider" class="form-group" type="range" name="longitude" min="-180" max="180" step="0.01">
