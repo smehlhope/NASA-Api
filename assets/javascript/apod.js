@@ -18,7 +18,7 @@ $('#refresh').on("click", function(){
 ///////SLIDE-TOGGLE ELEMENTS///////////////////////
 $('#apod-slider').on('click', function() {
 	$('#copyright, #apod-title, #apod-explaination').slideToggle('slow');
-	$(this).toggleClass('flip-apod-on flip-apod-off');
+	$(this).toggleClass('slide-apod-on slide-apod-off');
 });
 
 $('.show-planets').on('click', function() {

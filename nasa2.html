@@ -21,7 +21,7 @@
 			<img id="apod-img-id"/>
 			<iframe id="apod-vid-id" type="text/html" frameborder="0"></iframe>
 		</div> 
-		<div id="apod-details" class="flip-apod-off">
+		<div id="apod-details" class="slide-apod-off">
 			<h4 id="apod-title"></h4>
 			<p id="copyright"></p>
 			<p id="apod-explaination"></p>
@@ -35,15 +35,15 @@
 		<div id="mars">
 			<img id="mars-img-id" class="planet-image" />
 			<div id="mars-details">
-				<h4 id="flip-mars">Mars Rover Imagery <span class="glyphicon glyphicon-resize-full"></span></h4>
-				<div class="image-details">
+				<h4 id="slide-mars">Mars Rover Imagery <small><span class="glyphicon glyphicon-resize-full"></span></small></h4>
+				<div id="mars-img-details">
 					<h5 id="mars-camera"></h5>
 					<p id="mars-sol"></p>
 					<p id="mars-earth-date"></p>
 					<p id="mars-landing-date"></p>
 				</div>	
 				<p id="error-message-mars" class="text-danger"></p>
-				<form id="mars-locations" method="post">
+				<form id="mars-form" method="post">
 					<p><small><span class='glyphicon glyphicon-alert'></span> Because the Mars rovers have many jobs to do, not all camera/rover combinations have available imagery. Try another combination if nothing shows up!</small></p>
 					<div class="form-group">
 						<label for="rover">Rover:</label>
@@ -67,12 +67,14 @@
 		<div id="earth">
 			<img id="earth-img-id" class="planet-image"/>
 			<div id="earth-details">
-				<h4 id="flip-earth">Choose Where You View Earth <span class="glyphicon glyphicon-resize-full"></span></h4>
-				<h4 id="scene-id"></h4>
-				<p id="longitude"></p>
-				<p id="latitude"></p>
-				<p id="earth-credit"></p>
-				<form id="earth-locations" method="post">
+				<h4 id="slide-earth">Choose Where You View Earth <small><span class="glyphicon glyphicon-resize-full"></span></small></h4>
+				<div id="earth-img-details">
+					<h4 id="scene-id"></h4>
+					<p id="longitude"></p>
+					<p id="latitude"></p>
+					<p id="earth-credit"></p>
+				</div>
+				<form id="earth-form" method="post">
 					<p id="error-message-earth" class="text-danger"></p>
 					<p><small><span class='glyphicon glyphicon-alert'></span> Landsat 8 imagery availability is highly dependent on weather and chosen location.</small></p>
 					<div class="form-group">
