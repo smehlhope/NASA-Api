@@ -6,25 +6,38 @@
 	<meta name="description" content="">
 	
 	<script src="assets/javascript/jquery-2.2.0.min.js"></script>
+	<script src="assets/javascript/jquery-ui.js"></script>
 	<script src="assets/javascript/apod.js"></script>
 	<script src="assets/javascript/mars.js"></script>
 	<script src="assets/javascript/earth.js"></script>
 	<script src="assets/javascript/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery-ui.theme.css">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery-ui.structure.css">
 </head>
 <body>
-<div class="content-container">
-	<button id="refresh" type="button" class="btn btn-xs btn-primary"><small>Refresh</small></button>
+<div id="content-container">
+	<!-- <button id="refresh" type="button" class="btn btn-xs btn-primary"><small>Refresh</small></button> -->
 	<div id="apod">
 		<div id="apod-video">
 			<img id="apod-img-id"/>
 			<iframe id="apod-vid-id" type="text/html" frameborder="0"></iframe>
 		</div> 
-		<div id="apod-details" class="slide-apod-off">
-			<h4 id="apod-title"></h4>
-			<p id="copyright"></p>
-			<p id="apod-explaination"></p>
+		<div id="apod-holder">
+			<div id="apod-details">
+				<h4 id="apod-title"></h4>
+				<p id="copyright"></p>
+				<p id="apod-date"></p>
+				<p id="apod-explaination"></p>
+			</div>	
+			<form id="apod-form" class="form-inline" method="post">
+				<div class="form-group">
+					<label for="datepicker">Choose Another Date: </label>
+					<input name="datepicker" type="text" id="datePicker" class="form-control"/>
+				</div>
+			</form>
 			<h3 id="apod-slider">NASA's Astronomy Picture of the Day <span class="glyphicon glyphicon-resize-full"></span></h3>
 		</div>
 	</div>

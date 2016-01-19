@@ -1,5 +1,9 @@
 $(function() {
 
+	$('.show-planets').on('click', function() {
+    	$('#mars, #earth').slideToggle('slow');
+	});
+
 	//////////////GET DATE FOR MARS IMAGERY //////
 	var today = new Date();
 	var dd = today.getDate()-3;
