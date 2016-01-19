@@ -1,12 +1,7 @@
 $(function() {
 
-////////REFRESH PAGE//////////////
-// $('#refresh').on("click", function(){
-//   location.reload(true);
-// });
 
     ///////////DATEPICKER JQUERY-UI///////////////////////
-    // $('#datePicker').datepicker();
     $('#datePicker').datepicker({
         dateFormat: "yy-mm-dd",
         setDate: new Date(),
@@ -18,7 +13,6 @@ $(function() {
             $('#apod-form').submit();
         }
     });
-
 
 
     //////////APOD IMAGERY FORM///////////////////////////
@@ -95,7 +89,6 @@ $(function() {
 
     ///////SLIDE-TOGGLE ELEMENTS///////////////////////
     $('#apod-slider').click(function() {
-        $(this).toggleClass('slide-apod-on slide-apod-off');
         toggleDetails();
         toggleForm();
     });
@@ -124,12 +117,11 @@ function handleResult(result){
     } else {
         $("#apod-vid-id").css("display", "none"); 
         $("#content-container").css('background-image', "url(" + result.url + ")");
-    }
-    
-    $("#reqObject").text(urlAPOD);
-    $("#returnObject").text(JSON.stringify(result, null, 4));  
+    } 
     $("#apod-explaination").text(result.explanation);
     $("#apod-title").text(result.title);
+    toggleDetails();
+    toggleForm();
 };
 
 

@@ -12,11 +12,6 @@ body {
   color: #f7f7f7;
 }
 
-#refresh {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 #content-container {
   position: absolute;
   -webkit-background-size: cover;
@@ -27,8 +22,6 @@ body {
   width: 100%;
   height: 100%;
   bottom: 0;
-/*  left: 0;
-  right: 0;*/
 }
 
 #apod {
@@ -48,10 +41,11 @@ body {
 }
 
 #apod-slider {
-  bottom: 0;
-  background: rgba(0,0,0,0.8);
-  border-radius: 8px 8px 0 0;
-  padding: 5px 25px 10px 25px;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px 8px 0 0;
+    padding: 8px 25px 8px 25px;
 }
 
 #apod-details, .show-planets {
@@ -73,8 +67,9 @@ body {
   display: none;
 }
 
+#apod-form,
 #copyright,
-#apod-date
+#apod-date,
 #apod-title,
 #apod-explaination {
 	display: none;
