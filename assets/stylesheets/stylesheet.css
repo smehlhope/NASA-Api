@@ -1,46 +1,46 @@
 * {
-	padding: 0;
-	margin: 0;
-  text-decoration: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
 }
 body {
-	/*-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-	background-repeat: no-repeat;*/
-  color: #f7f7f7;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    color: #f7f7f7;
 }
 
 #content-container {
-  position: absolute;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
+    position: absolute;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
 }
 
 #apod {
-  position: absolute;
-  width: 35%;
-  bottom: 0;
-  left: 0;
+    position: absolute;
+    width: 35%;
+    bottom: 0;
+    left: 0;
 }
 
 #apod-video {
-	width: 640px; 
-	height: 385px;
+    width: 640px; 
+    height: 385px;
 }
 
 #copyright, #apod-date {
-  font-style: italic;
+    font-style: italic;
 }
 
-#apod-slider {
+#apod-slider.off {
     bottom: 0;
     width: 100%;
     background: rgba(0,0,0,0.8);
@@ -48,23 +48,27 @@ body {
     padding: 8px 25px 8px 25px;
 }
 
+#apod-slider.on {
+    border-radius: 0;
+}
+
 #apod-details, .show-planets {
-  background: rgba(0,0,0,0.8);
-  border-radius: 8px 8px 0 0;
-  padding: 5px 25px 10px 25px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px 8px 0 0;
+    padding: 5px 25px 10px 25px;
 }
 
 .show-planets {
-  position: absolute;
-  right: 0px;
-  bottom: 0;
-  width: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    width: 100%;
 }
 .show-planets .planet-image {
-  width: 100%;
-  margin: -10px -25px 10px;
-  border-radius: 8px 8px 0 0;
-  display: none;
+    width: 100%;
+    margin: -10px -25px 10px;
+    border-radius: 8px 8px 0 0;
+    display: none;
 }
 
 #apod-form,
@@ -72,149 +76,157 @@ body {
 #apod-date,
 #apod-title,
 #apod-explaination {
-	display: none;
+    display: none;
 }
 
 #apod-title {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 #planet-container {
-  position: absolute;
-  border-radius: 8px 8px 0 0;
-  width: 65%;
-  bottom: 0;
-  right: 0;
+    position: absolute;
+    border-radius: 8px 8px 0 0;
+    width: 65%;
+    bottom: 0;
+    right: 0;
 }
 
 #mars, #earth {
-  position: absolute;
-  width: 35%;
-  bottom: 73px;
-  background: rgba(0,0,0,0.8);
-  border-radius: 8px 8px 0 0;
-  padding: 10px 10px 0 10px;
-  display: none;
+    position: absolute;
+    width: 35%;
+    bottom: 73px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px 8px 0 0;
+    padding: 10px 10px 0 10px;
+    display: none;
 }
 
 #mars {
-  right: 35%;
-}
-
-#mars.on, #earth.on {
-  display: inline-block;
+    right: 35%;
 }
 
 #earth {
-  right: 0;
+    right: 0;
 }
 
 form {
-  padding-right: 10%;
-  padding-left: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
 #mars-img-id, #earth-img-id {
-  width: 100%;
-  box-shadow: 0px 0px 0px 2px #000;
-  border-radius: 15px;
-  display: none;
+    width: 100%;
+    box-shadow: 0px 0px 0px 2px #000;
+    border-radius: 15px;
+    display: none;
 }
 #mars-img-id {
-  -webkit-filter: brightness(150%);
-  filter: brightness(150%);
+    -webkit-filter: brightness(150%);
+    filter: brightness(150%);
 }
 
 /******   RANGE SLIDER STYLING *****/
 #longSlider, #latSlider {
-	width: 100%;
+    width: 100%;
 }
 
 input[type=range] {
-  -webkit-appearance: none;
-  margin: 18px 0;
-  width: 100%;
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
 }
+
 input[type=range]:focus {
-  outline: none;
+    outline: none;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101;
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
 }
+
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 30px;
-  width: 12px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -14px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 12px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
 }
+
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #367ebd;
+    background: #367ebd;
 }
+
 input[type=range]::-moz-range-track {
-  width: 50%;
-  height: 8.4px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101;
+    width: 50%;
+    height: 8.4px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
 }
+
 input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 30px;
-  width: 12px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 12px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
 }
+
 input[type=range]::-ms-track {
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
-  animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  border-width: 16px 0;
-  color: transparent;
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
 }
+
 input[type=range]::-ms-fill-lower {
-  background: #2a6495;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
+
 input[type=range]::-ms-fill-upper {
-  background: #3071a9;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
+
 input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 30px;
-  width: 12px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 12px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
 }
+
 input[type=range]:focus::-ms-fill-lower {
-  background: #3071a9;
+    background: #3071a9;
 }
+
 input[type=range]:focus::-ms-fill-upper {
-  background: #367ebd;
+    background: #367ebd;
 }

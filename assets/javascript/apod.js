@@ -72,6 +72,7 @@ $(function() {
 
     function toggleForm(state, speed) {
         _slideToggleElement($('#apod-form'), state, speed);
+        $('#apod-slider').toggleClass('on');
     }
 
     function _slideToggleElement(element, state, speed) {
