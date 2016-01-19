@@ -1,5 +1,14 @@
 $(function() {
 
+    /////////////ABOUT DIV/////////////////////////
+    // $('#about-expand').on('click', function(event) {
+    //     event.preventDefault();
+    //     if ($('#about').is(':hidden')) {
+    //         $('#about').show();
+    //     } else {
+    //         $('#about').css('display', 'none'); 
+    //     }
+    // });
 
     ///////////DATEPICKER JQUERY-UI///////////////////////
     $('#datePicker').datepicker({

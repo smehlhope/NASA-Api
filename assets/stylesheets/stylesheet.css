@@ -12,6 +12,22 @@ a {
     text-decoration: none;
     color: #00007d;
 }
+#about-expand {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+}
+
+#about {
+    display: none;
+    position: absolute;
+    left: 2%;
+    top: 10%;
+    width: 400px;
+    background: rgba(0,0,0,0.8);
+    padding: 10px 10px 0 10px;
+    border-radius: 8px;
+}
 
 #content-container {
     position: absolute;
@@ -24,6 +40,7 @@ a {
     height: 100%;
     bottom: 0;
 }
+
 
 #apod {
     position: absolute;
