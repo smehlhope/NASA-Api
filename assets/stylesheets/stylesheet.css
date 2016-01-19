@@ -3,13 +3,14 @@
     margin: 0;
     text-decoration: none;
 }
+
 body {
-    /*-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;*/
     color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+    color: #00007d;
 }
 
 #content-container {
@@ -27,7 +28,7 @@ body {
 #apod {
     position: absolute;
     width: 35%;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
 }
 
@@ -40,15 +41,18 @@ body {
     font-style: italic;
 }
 
-#apod-slider.off {
+#apod-slider {
     bottom: 0;
     width: 100%;
     background: rgba(0,0,0,0.8);
-    border-radius: 8px 8px 0 0;
     padding: 8px 25px 8px 25px;
 }
 
-#apod-slider.on {
+.off {
+    border-radius: 8px 8px 0 0;
+}
+
+.on {
     border-radius: 0;
 }
 
@@ -75,7 +79,8 @@ body {
 #copyright,
 #apod-date,
 #apod-title,
-#apod-explaination {
+#apod-explaination,
+#apod-details {
     display: none;
 }
 
@@ -87,7 +92,7 @@ body {
     position: absolute;
     border-radius: 8px 8px 0 0;
     width: 65%;
-    bottom: 0;
+    bottom: 20px;
     right: 0;
 }
 
@@ -123,6 +128,11 @@ form {
 #mars-img-id {
     -webkit-filter: brightness(150%);
     filter: brightness(150%);
+}
+.panel-footer p {
+    display: inline;
+    padding-left: 10px;
+    margin: 0;
 }
 
 /******   RANGE SLIDER STYLING *****/

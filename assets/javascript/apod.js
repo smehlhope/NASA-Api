@@ -24,6 +24,7 @@ $(function() {
 
         //Get the image from the url
         getNewAPODImage(urlAPODcustom, date);
+        $('#apod-slider').toggleClass('off');
     });
 
     function getNewAPODImage(urlAPODcustom, date) {
@@ -68,12 +69,12 @@ $(function() {
     function toggleDetails(state, speed) {
         _slideToggleElement($('#apod-details'), state, speed);
         $('#copyright, #apod-title, #apod-explaination').show();
+        $('#apod-slider').toggleClass('off');
     };
 
     function toggleForm(state, speed) {
         _slideToggleElement($('#apod-form'), state, speed);
-        $('#apod-slider').toggleClass('on');
-    }
+    };
 
     function _slideToggleElement(element, state, speed) {
         var speed = speed || 'slow';
@@ -107,6 +108,8 @@ $.ajax({
 //////RETRIEVE IMAGERY FOR APOD TO PAGE/////////
 
 function handleResult(result){
+    // toggleDetails();
+    toggleForm();
     if("copyright" in result) {
         $("#copyright").text("Image Credits: " + result.copyright);
     } else {
@@ -121,8 +124,6 @@ function handleResult(result){
     } 
     $("#apod-explaination").text(result.explanation);
     $("#apod-title").text(result.title);
-    toggleDetails();
-    toggleForm();
 };
 
 
