@@ -5,8 +5,8 @@
 	<title>NASA API Examples</title>
 	<meta name="description" content="">
 	
-	<script src="assets/javascript/jquery-2.2.0.min.js"></script>
-	<script src="assets/javascript/jquery-ui.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBF_zH45TkJNPFC2eKrVJMNI4vg-7V3ku0"></script>
 	<script src="assets/javascript/apod.js"></script>
 	<script src="assets/javascript/mars.js"></script>
@@ -14,9 +14,7 @@
 	<script src="assets/javascript/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery-ui.css">
-	<link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery-ui.theme.css">
-	<link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery-ui.structure.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 </head>
 <body>
 <div id="content-container">
