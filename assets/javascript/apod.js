@@ -1,14 +1,12 @@
 $(function() {
 
     /////////////ABOUT DIV/////////////////////////
-    // $('#about-expand').on('click', function(event) {
-    //     event.preventDefault();
-    //     if ($('#about').is(':hidden')) {
-    //         $('#about').show();
-    //     } else {
-    //         $('#about').css('display', 'none'); 
-    //     }
-    // });
+    $('#about-expand').on('click', function(event) {
+       $('#about').toggle();
+       $(this).text(function(i, text) {
+            return text === "About" ? "Dismiss" : "About";
+       })
+    });
 
     ///////////DATEPICKER JQUERY-UI///////////////////////
     $('#datePicker').datepicker({
@@ -22,7 +20,6 @@ $(function() {
             $('#apod-form').submit();
         }
     });
-
 
     //////////APOD IMAGERY FORM///////////////////////////
     $('#apod-form').on('submit', function(event) {

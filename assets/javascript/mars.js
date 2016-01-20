@@ -1,9 +1,5 @@
 $(function() {
 
-	$('.show-planets').on('click', function() {
-    	$('#mars, #earth').slideToggle('slow');
-	});
-
 	//////////////GET DATE FOR MARS IMAGERY //////
 	var today = new Date();
 	var dd = today.getDate()-3;
@@ -58,12 +54,12 @@ $(function() {
 
 	function toggleDetails(state, speed) {
 		_slideToggleElement($('#mars-img-details'), state, speed);
-		$('#slide-mars').html('Mars Rover Imagery <small><span class="glyphicon glyphicon-menu-hamburger"></span></small>');
+		$('#slide-mars').html('Mars Rover Imagery <small><span class="glyphicon glyphicon-menu-hamburger"></span> New View</small> ');
 	};
 
 	function toggleForm(state, speed) {
 		_slideToggleElement($('#mars-form'), state, speed);
-		$('#slide-mars').html('Mars Rover Imagery <small><span class="glyphicon glyphicon-resize-full"></span></small>');
+		$('#slide-mars').html('Mars Rover Imagery <small><span class="glyphicon glyphicon-resize-full"></span> New View</small> ');
 	};
 
 	function _slideToggleElement(element, state, speed) {

@@ -23,8 +23,8 @@ a {
     position: absolute;
     left: 2%;
     top: 10%;
-    width: 400px;
-    background: rgba(0,0,0,0.8);
+    width: 50%;
+    background: rgba(0,0,0,0.9);
     padding: 10px 10px 0 10px;
     border-radius: 8px;
 }
@@ -54,7 +54,7 @@ a {
     height: 385px;
 }
 
-#copyright, #apod-date {
+#copyright, #apod-date, .signature, #about h2 {
     font-style: italic;
 }
 
@@ -129,6 +129,11 @@ a {
 
 #earth {
     right: 0;
+}
+
+/* Google maps canvas */
+#map_canvas {
+    height:225px;
 }
 
 form {

@@ -1,5 +1,6 @@
 $(function() {
 
+
 	//////////////GET DATE FOR EARTH IMAGERY //////
 	var today2 = new Date();
 	var dd = today2.getDate()-3;
@@ -9,24 +10,41 @@ $(function() {
 	if(mm<10) { mm = '0'+mm } 
 	var today2 = yyyy2 + '-' + mm + '-' + dd;
 
+	
+	//////GOOGLE MAPS API INTIALIZE/////////////////
+	var myLatlng = new google.maps.LatLng(47.608894, -122.340056);
+    
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(47.608894, -122.340056);
 
-	///////LATITUDE AND LONGITUDE SLIDER/////////////
-	var longVal = $('#longVal');
-	var latVal = $('#latVal');
+        var myOptions = {
+            zoom: 10,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-	$('#longSlider').change(function(){
-	    longVal.html(this.value);
+        var marker = new google.maps.Marker({
+            draggable: true,
+            position: myLatlng,
+            map: map,
+            title: "Your location"
+        });
+
+        google.maps.event.addListener(marker, 'dragend', function (event) {
+            document.getElementById("latSlider").value = event.latLng.lat();
+            document.getElementById("longSlider").value = event.latLng.lng();
+        });
+
+    }
+
+    initialize();
+
+	$('.show-planets').on('click', function() {
+    	$('#mars, #earth').slideToggle('slow');
+    	google.maps.event.trigger(map, 'resize');
+    	 map.setCenter(myLatlng);
 	});
-
-	$('#latSlider').change(function(){
-	    latVal.html(this.value);
-	});
-
-	// Trigger the event on load, so the value field is populated:
-
-	$('#longSlider').change();
-	$('#latSlider').change();
-
 
 	////////EARTH IMAGERY FORM ////////////////
 
