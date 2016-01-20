@@ -54,12 +54,12 @@ $(function() {
 
 	function toggleDetails(state, speed) {
 		_slideToggleElement($('#mars-img-details'), state, speed);
-		$('#slide-mars').html('Mars Rover Imagery <small><span class="glyphicon glyphicon-menu-hamburger"></span> New View</small> ');
+		$('#slide-mars').html('Change Mars Rover Imagery <small><span class="glyphicon glyphicon-pencil"></span></small> ');
 	};
 
 	function toggleForm(state, speed) {
 		_slideToggleElement($('#mars-form'), state, speed);
-		$('#slide-mars').html('Mars Rover Imagery <small><span class="glyphicon glyphicon-resize-full"></span> New View</small> ');
+		$('#slide-mars').html('Mars Rover Imagery <small><span class="glyphicon glyphicon-resize-full"></span></small> ');
 	};
 
 	function _slideToggleElement(element, state, speed) {

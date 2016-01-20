@@ -18,7 +18,7 @@ $(function() {
         var myLatlng = new google.maps.LatLng(47.608894, -122.340056);
 
         var myOptions = {
-            zoom: 10,
+            zoom: 9,
             center: myLatlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -94,7 +94,7 @@ $(function() {
 
 	function toggleDetails(state, speed) {
 		_slideToggleElement($('#earth-img-details'), state, speed);
-		$('#slide-earth').html('Choose Where You View Earth <small><span class="glyphicon glyphicon-menu-hamburger"></span></small>');
+		$('#slide-earth').html('Change Where You View Earth <small><span class="glyphicon glyphicon-pencil"></span></small>');
 	};
 
 	function toggleForm(state, speed) {
